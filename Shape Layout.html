@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RWD - shape layout</title>
+
+    <style>
+      * {
+        text-align: center;
+        overflow: hidden;
+        justify-content: center;
+      }
+
+      body {
+        text-align: center;
+        margin: 0;
+      }
+
+      header {
+        background-color: black;
+        color: aliceblue;
+        padding: 10px;
+        margin-bottom: 15px;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      nav a {
+        background-color: #414141;
+        padding: 8px;
+        text-decoration: none;
+        display: flex;
+        gap: 10px;
+        margin-top: 5px;
+        color: azure;
+        justify-content: center;
+      }
+
+      section {
+        background-color: grey;
+        padding: 100px;
+        margin-top: 5px;
+      }
+
+      .mainContent,
+      .sidebar {
+        margin: 10px 10px 10px 10px;
+        background-color: gainsboro;
+        padding: 30px;
+      }
+
+      .bilog {
+        background-color: grey;
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+      }
+
+      .circle {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 70px;
+        padding: 5px;
+      }
+
+      .action {
+        background-color: rgb(86, 86, 86);
+        color: aliceblue;
+        text-align: center;
+        padding: 10px;
+        margin: 15px 0px 15px 0px;
+      }
+
+      footer {
+        background-color: black;
+        color: aliceblue;
+        padding: 10px;
+      }
+
+      @media (min-width: 900px) and (max-width: 1000px) {
+        nav {
+          flex-direction: row;
+          display: flex;
+          gap: 10px;
+        }
+
+        main {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .circle {
+          gap: 50px;
+        }
+      }
+
+      @media (min-width: 1024px) /*desktop tuh*/ {
+        nav {
+          flex-direction: row;
+          display: flex;
+          gap: 10px;
+        }
+
+        main {
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          gap: 10px;
+        }
+
+        .circle {
+          justify-content: space-around;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>HEADER</h2>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h3>HERO SECTION</h3>
+    </section>
+
+    <main class="main">
+      <article class="mainContent">MAIN CONTENT</article>
+      <aside class="sidebar">SIDEBAR</aside>
+    </main>
+
+    <div class="circle">
+      <article class="bilog"></article>
+      <article class="bilog"></article>
+      <article class="bilog"></article>
+      <article class="bilog"></article>
+      <article class="bilog"></article>
+      <article class="bilog"></article>
+      <article class="bilog"></article>
+      <article class="bilog"></article>
+    </div>
+
+    <section class="action">
+      <h4>CALL TO ACTION</h4>
+    </section>
+
+    <footer>
+      <h2>FOOTER</h2>
+    </footer>
+  </body>
+</html>
